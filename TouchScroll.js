@@ -54,18 +54,18 @@ var UI = UI || {};
 	Scroll.prototype._onStart=function(e){
 
 		e.preventDefault(); 
-        e.stopPropagation();
+        	e.stopPropagation();
 
-        this.start = e.changedTouches?e.changedTouches[0]['pageY']:e.pageY;
-        this.t=new Date();
-        this.p = this._getPosition() || 0;
+        	this.start = e.changedTouches?e.changedTouches[0]['pageY']:e.pageY;
+        	this.t=new Date();
+        	this.p = this._getPosition() || 0;
 
-        this._onScroll(this.p); // 处理移动中点击定位
+        	this._onScroll(this.p); // 处理移动中点击定位
 
-        if(e.type === 'mousedown'){
-        	document.addEventListener('mousemove',this._moveHandler,false);
-        	document.addEventListener('mouseup',this._endHandler,false);
-        }
+        	if(e.type === 'mousedown'){
+        		document.addEventListener('mousemove',this._moveHandler,false);
+        		document.addEventListener('mouseup',this._endHandler,false);
+       	 	}
 
 	}
 	
